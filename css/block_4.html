@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+    <style type="text/css">
+        * {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #r1 {
+            width: 100%;
+            height: 25px;
+            margin-bottom: 10px;
+            background-color: gray;
+            padding-top: 5px;
+        }
+
+        #r1c1 {
+            width: 50%;
+            float: left;
+        }
+
+        #r1c2 {
+            width: 50%;
+            float: left;
+        }
+
+        #r5 {
+            background-color: grey;
+            width: 100%;
+            height: 65px;
+            padding-top: 35px;
+            margin-bottom: 10px;
+            text-align: center;
+
+        }
+
+        #r3 {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #r3 div {
+            float: left;
+            width: 32%;
+            height: 100px;
+            background-color: grey;
+            padding-top: 70px;
+        }
+
+        #r3c2 {
+            margin-right: 2%;
+        }
+
+        #r3c1 {
+            margin-right: 2%;
+        }
+
+        #r4 {
+            background-color: grey;
+            width: 100%;
+            height: 50px;
+            padding-top: 35px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+
+
+
+        #r2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #r2r1 div,
+        #r2r2 div,
+        #r2r3 div,
+        #r2r4 div {
+            margin-right: 2%;
+        }
+
+        #r2r1 div {
+            background-color: grey;
+            float: left;
+            width: 23%;
+            margin-bottom: 10px;
+            height: 125px;
+        }
+
+        #r2r2 div {
+            background-color: grey;
+            float: left;
+            width: 23%;
+            margin-bottom: 10px;
+            height: 125px;
+        }
+
+        #r2r3 div {
+            background-color: grey;
+            float: left;
+            width: 23%;
+            margin-bottom: 10px;
+            height: 125px;
+        }
+
+        #r2r4 div {
+            background-color: grey;
+            float: left;
+            width: 23%;
+            margin-bottom: 10px;
+            height: 125px;
+        }
+
+        #r2r1 div:last-child,
+        #r2r2 div:last-child,
+        #r2r3 div:last-child,
+        #r2r4 div:last-child {
+            margin-right: 0 !important;
+            width: 25% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="r1">
+            <div id="r1c1">Logo</div>
+            <div id="r1c2">navigation</div>
+        </div>
+        <div id="r2">
+            <div id="r2r1">
+                <div id="r2r1c1">1</div>
+                <div id="r2r1c2">1</div>
+                <div id="r2r1c3">1</div>
+                <div id="r2r1c4">1</div>
+            </div>
+            <div id="r2r2">
+                <div id="r2r2c1">2</div>
+                <div id="r2r2c2">2</div>
+                <div id="r2r2c3">2</div>
+                <div id="r2r2c4">2</div>
+            </div>
+            <div id="r2r3">
+                <div id="r2r3c1">3</div>
+                <div id="r2r3c2">3</div>
+                <div id="r2r3c3">3</div>
+                <div id="r2r3c4">3</div>
+            </div>
+            <div id="r2r4">
+                <div id="r2r4c1">4</div>
+                <div id="r2r4c2">4</div>
+                <div id="r2r4c3">4</div>
+                <div id="r2r4c4">4</div>
+            </div>
+        </div>
+        <div id="r3">
+            <div id="r3c1">Box 1</div>
+            <div id="r3c2">Box 2</div>
+            <div id="r3c3">Box 3</div>
+        </div>
+        <div id="r4">Footer</div>
+    </div>
+</body>
+
+</html>

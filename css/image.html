@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image hover</title>
+    <style>
+        .container{
+            width: 400px;
+            position: relative;
+        }
+        /* .image{
+            display: block;
+        } */
+        .overlay{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+            transition: 1s;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* height: 100%;
+            width: 100%; */
+        }
+        .container:hover .overlay{
+            opacity: 1;
+        }
+        .text {
+			  color: white;
+			  font-size: 20px;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  text-align: center;
+			  
+			}
+    </style>
+</head>
+
+<body>
+    <h2>Image Effect</h2>
+    <div class="container">
+        <img src="https://picsum.photos/400" class="image">
+        <div class="overlay">
+            <div class="text">KCS</div>
+        </div>
+    </div>
+</body>
+
+</html>
