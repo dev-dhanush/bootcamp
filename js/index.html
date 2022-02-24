@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        .button {
+            height: 100px;
+            width: 100px;
+        }
+
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        function alert_fun() {
+            alert("this is an alert!");
+        }
+        function confirm_fun() {
+            confirm("this is an confirm!") ? alert("yes") : alert("no")
+        }
+        function prompt_fun() {
+            console.log(prompt("this is an prompt!"))
+        }
+        function promptChangeColor() {
+            document.body.style.backgroundColor = prompt("enter color to change backgorujd color")
+        }
+        function promptChangeColorDiv() {
+            document.getElementById("d1").style.backgroundColor = prompt("enter color to change div color")
+        }
+        function changeColorDiv() {
+            document.getElementById("d1").style.backgroundColor = "green"
+        }
+        function changeColorBackground() {
+            document.body.style.backgroundColor = "green"
+        }
+        function changePickerBackground(color) {
+            document.body.style.backgroundColor = document.getElementById("picker_div").value
+        }
+        function changePickerDiv(color) {
+            document.getElementById("d1").style.backgroundColor = document.getElementById("picker_background").value
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="alert('this is alert')">alert</button>
+    <button type="button" onclick="confirm('this is confirm')">confirm</button>
+    <button type="button" onclick="prompt('this is prompt')">promt</button>
+    <hr />
+
+    <button type="button" onclick="alert_fun()">alert</button>
+    <button type="button" onclick="confirm_fun()">confirm</button>
+    <button type="button" onclick="prompt_fun()">promt</button>
+    <hr />
+
+    <div id="d1"></div>
+    <hr />
+    
+    <button onclick="changeColorDiv()">change div to green</button>
+    <button onclick="changeColorBackground()">change background to green</button>
+    <hr />
+
+    <input type="color" id="picker_div" onchange="changePickerDiv()" >
+    <input type="color" id="picker_background" onchange="changePickerBackground()" >
+    <hr/>
+    <button type="button" onclick="promptChangeColor()">Promot to change Background COlor</button>
+    <button type="button" onclick="promptChangeColorDiv()">Promot to change Div COlor</button>
+
+</body>
+
+</html>

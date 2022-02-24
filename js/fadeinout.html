@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade in out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+
+    <style>
+        #b1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+
+        #b2 {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: blue;
+        }
+
+        #b3 {
+            width: 100px;
+            margin-bottom: 10px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        $(document).ready(() => {
+            $('#in').click(() => {
+                $("#b1").fadeIn(1000)
+                $("#b2").fadeIn(2000)
+                $("#b3").fadeIn(3000)
+            })
+            $('#out').click(() => {
+                $("#b1").fadeOut(1000)
+                $("#b2").fadeOut(2000)
+                $("#b3").fadeOut(3000)
+            })
+            $('#toggle').click(()=>{
+                $("#b1").fadeToggle(1000)
+                $("#b2").fadeToggle(2000)
+                $("#b3").fadeToggle(3000)
+            })
+        })   
+    </script>
+
+</head>
+
+<body>
+
+    <button id="in">fade in</button>
+    <button id="out">fade out</button>
+    <button id="toggle">Toggle</button>
+    <hr />
+
+    <div id="b1"></div>
+    <div id="b2"></div>
+    <div id="b3"></div>
+</body>
+
+</html>
