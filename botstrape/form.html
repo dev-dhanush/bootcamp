@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+			type="text/javascript"
+		></script>
+		<script
+			src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+			integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+
+		<!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    /> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script> -->
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link
+			href="css/bootstrap/bootstrap.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+				var $FullNameRegEx = /^([a-zA-Z ]{2,40})$/;
+				var $BankAccountNameRegEx = /^([a-zA-Z ]{2,60})$/;
+				var $PasswordRegEx =
+					/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+				var $EmailIdRegEx =
+					/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+				var $ConNoRegEx = /^([0-9]{10})$/;
+				var $AgeRegEx = /^([0-9]{1,2})$/;
+				var $AadhaarNoRegEx = /^([0-9]{12})$/;
+				var $GSTNoRegEx =
+					/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+				var $IndianDrivingLicenseNoRegEx =
+					/^([A-Z]{2,3}[-/0-9]{8,13})$/;
+				var $IndianVehicleRegNoRegEx =
+					/^([A-Z]{2}[0-9]{1,2}[A-Z]{1,3}[0-9]{1,4})$/;
+				var $PincodeRegEx = /^[1-9][0-9]{5,6}$/;
+				var $PANNoRegEx = /^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$/;
+				var $IFSCCodeRegEx = /^[A-Za-z]{4}0[A-Z0-9a-z]{6}$/;
+				var $BankAccountNoRegEx = /^([0-9]{9,18})$/;
+				var $PostTitleRegex = /^(.{30,300})$/;
+				var $PostDescRegex = /^(.{100,3000})$/;
+				var $LatitudeLongitude =
+					/^(-?(?:1[0-7]|[1-9])?\d(?:\.\d{1,8})?|180(?:\.0{1,8})?)$/;
+
+				let firstName = false,
+					lastName = false,
+					number = false,
+					email = false,
+					contactMessage = false,
+					age = false,
+					birth_date = false;
+
+				// <!--FirstName, LastName, Contact No. ==> Keypress -->
+				// <!--ALL TextBox ==> Blur Validation. -->
+				// <!--Button Click Validation - For All Textbox. -->
+				$("#firstName").blur((e)=> {
+					$("#firstNameValidation").empty();
+					if (e.target.value == "" || e.target.value == null) {
+						$("#firstNameValidation").html(
+							"Empty first name not valid"
+						);
+						firstName = false;
+					} else {
+						if (!e.target.value.match($FNameLNameRegEx)) {
+							$("#firstNameValidation").html(
+								"invalid first name"
+							);
+							firstName = false;
+						} else {
+							firstName = true;
+						}
+					}
+				});	
+				// $("#firstName").blur((){
+				// 	$("#firstNameValidation").empty();
+				// 	if ($(this).val() == "" || $(this).val() == null) {
+				// 		$("#firstNameValidation").html(
+				// 			"Empty first name not valid"
+				// 		);
+				// 		firstName = false;
+				// 	} else {
+				// 		if (!$(this).val().match($FNameLNameRegEx)) {
+				// 			$("#firstNameValidation").html(
+				// 				"invalid first name"
+				// 			);
+				// 			firstName = false;
+				// 		} else {
+				// 			firstName = true;
+				// 		}
+				// 	}
+				// });
+
+				$("#lastName").blur(function () {
+					$("#lastNameValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#lastNameValidation").html(
+							"Empty last name not valid"
+						);
+						lastName = false;
+					} else {
+						if (!$(this).val().match($FNameLNameRegEx)) {
+							$("#lastNameValidation").html("invalid last name");
+							lastName = false;
+						} else {
+							lastName = true;
+						}
+					}
+				});
+
+				$("#contact").blur(function () {
+					$("#contactValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#contactValidation").html("Empty number not valid");
+						number = false;
+					} else {
+						if (!$(this).val().match($ConNoRegEx)) {
+							$("#contactValidation").html("invalid number");
+							number = false;
+						} else {
+							number = true;
+						}
+					}
+				});
+
+				$("#email").blur(function () {
+					$("#emailValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#emailValidation").html("Empty email not valid");
+						email = false;
+					} else {
+						if (!$(this).val().match($EmailIdRegEx)) {
+							$("#emailValidation").html("invalid email");
+							email = false;
+						} else {
+							email = true;
+						}
+					}
+				});
+
+				$("#password").blur(function () {
+					$("#passwordValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#passwordValidation").html(
+							"Empty password not valid"
+						);
+						password = false;
+					} else {
+						if (!$(this).val().match($PasswordRegEx)) {
+							$("#passwordValidation").html("invalid password");
+							password = false;
+						} else {
+							password = true;
+						}
+					}
+				});
+
+				$("#age").blur(function () {
+					$("#ageValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#ageValidation").html("Empty age not valid");
+						age = false;
+					} else {
+						if (
+							!$(this).val().match($AgeRegEx) ||
+							$(this).val() < 18
+						) {
+							$("#ageValidation").html("invalid age");
+							age = false;
+						} else {
+							age = true;
+						}
+					}
+				});
+
+				$("#number").keypress(function (e) {
+					$("#numberValidation").empty();
+					let Flag = false;
+					e.which >= 48 && e.which <= 57
+						? (Flag = true)
+						: ((Flag = false),
+						  $("#numberValidation").html(
+								"(*) Invalid contact no..!!"
+						  ));
+					return Flag;
+				});
+				$("#firstName").keypress(function (e) {
+					$("#firstNameValidation").empty();
+					var Flag = false;
+					(e.which >= 65 && e.which <= 90) ||
+					(e.which >= 92 && e.which <= 121)
+						? (Flag = true)
+						: ((Flag = false),
+						  $("#firstNameValidation").html(
+								"(*) Invalid first Name..!!"
+						  ));
+					return Flag;
+				});
+
+				$("#lastName").keypress(function (e) {
+					$("#lastNameValidation").empty();
+					var Flag = false;
+					(e.which >= 65 && e.which <= 90) ||
+					(e.which >= 92 && e.which <= 121)
+						? (Flag = true)
+						: ((Flag = false),
+						  $("#lastNameValidation").html(
+								"(*) Invalid last Name..!!"
+						  ));
+					return Flag;
+				});
+
+				var curr_date = new Date();
+				var month = curr_date.getMonth() + 1;
+				var day = curr_date.getDate();
+				var output =
+					curr_date.getFullYear() -
+					18 +
+					"-" +
+					(month < 10 ? "0" : "") +
+					month +
+					"-" +
+					(day < 10 ? "0" : "") +
+					day;
+				$("#datepicker1").attr("max", output);
+
+				$("#datepicker1").change(function () {
+					$("#birthValidation").empty();
+					if ($(this).val() == "" || $(this).val() == null) {
+						$("#birthValidation").html(
+							"Empty birth date not valid"
+						);
+						birth_date = false;
+					} else {
+						console.log(new Date($(this).val()) < date);
+						if (new Date($(this).val()) > date) {
+							$("#birthValidation").html("+18 only");
+							birth_date = false;
+						} else {
+							birth_date = true;
+						}
+					}
+				});
+
+				// submit
+				$("#submit").click(()=> {
+					console.log("clicked");
+					$("#firstNameValidation").empty();
+					if (
+						$("#firstName").val() == "" ||
+						$("#firstName").val() == null
+					) {
+						$("#firstNameValidation").html(
+							"Empty first name not valid"
+						);
+						firstName = false;
+					} else {
+						if (!$("#firstName").val().match($FNameLNameRegEx)) {
+							$("#firstNameValidation").html(
+								"invalid first name"
+							);
+							firstName = false;
+						} else {
+							firstName = true;
+						}
+					}
+					$("#lastNameValidation").empty();
+					if (
+						$("#lastName").val() == "" ||
+						$("#lastName").val() == null
+					) {
+						$("#lastNameValidation").html(
+							"Empty last name not valid"
+						);
+						lastName = false;
+					} else {
+						if (!$("#lastName").val().match($FNameLNameRegEx)) {
+							$("#lastNameValidation").html("invalid last name");
+							lastName = false;
+						} else {
+							lastName = true;
+						}
+					}
+					$("#contactValidation").empty();
+					if (
+						$("#contact").val() == "" ||
+						$("#contact").val() == null
+					) {
+						$("#contactValidation").html("Empty number not valid");
+						number = false;
+					} else {
+						if (!$("#contact").val().match($ConNoRegEx)) {
+							$("#contactValidation").html("invalid number");
+							number = false;
+						} else {
+							number = true;
+						}
+					}
+					$("#passwordValidation").empty();
+					if (
+						$("#password").val() == "" ||
+						$("#password").val() == null
+					) {
+						$("#passwordValidation").html(
+							"Empty password not valid"
+						);
+						password = false;
+					} else {
+						if (!$("#password").val().match($PasswordRegEx)) {
+							$("#passwordValidation").html("invalid password");
+							password = false;
+						} else {
+							password = true;
+						}
+					}
+					$("#ageValidation").empty();
+					if ($("#age").val() == "" || $("#age").val() == null) {
+						$("#ageValidation").html("Empty age not valid");
+						age = false;
+					} else {
+						if (
+							!$("#age").val().match($AgeRegEx) ||
+							$("#age").val() < 18
+						) {
+							$("#ageValidation").html("invalid age");
+							age = false;
+						} else {
+							age = true;
+						}
+					}
+					$("#birthValidation").empty();
+					if (
+						$("#datepicker1").val() == "" ||
+						$("#datepicker1").val() == null
+					) {
+						$("#birthValidation").html(
+							"Empty birth date not valid"
+						);
+						birth_date = false;
+					} else {
+						console.log(new Date($("#datepicker1").val()) < date);
+						if (new Date($("#datepicker1").val()) > date) {
+							$("#birthValidation").html("+18 only");
+							birth_date = false;
+						} else {
+							birth_date = true;
+						}
+					}
+					if (
+						firstName == false ||
+						lastName == false ||
+						number == false ||
+						email == false ||
+						contactMessage == false ||
+						age == false ||
+						birth_date == false
+					) {
+						alert("Invalid form submission");
+					} else {
+						alert("Submitted successfully");
+					}
+				});
+			});
+		</script>
+
+		<style type="text/css">
+			#form {
+				box-shadow: 0px 0px 3px gray;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			i.fa,
+			b {
+				color: teal;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div
+					class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-12"
+					id="form"
+				>
+					<h3 class="text-center">
+						<i class="fa fa-user-plus"></i> Create new Account
+					</h3>
+
+					<div class="form-group">
+						<b>First Name</b>
+						<div class="input-group">
+							<div class="input-group-addon">
+								<i class="fa fa-user"></i>
+							</div>
+							<input
+								id="firstName"
+								type="text"
+								placeholder="Enter first name here.."
+								maxlength="20"
+								class="form-control"
+							/>
+						</div>
+						<small
+							id="firstNameValidation"
+							class="text-danger"
+						></small>
+					</div>
+
+					<div class="form-group">
+						<b>Last Name</b>
+						<div class="input-group">
+							<div class="input-group-addon">
+								<i class="fa fa-user"></i>
+							</div>
+							<input
+								id="lastName"
+								type="text"
+								placeholder="Enter last name here.."
+								maxlength="20"
+								class="form-control"
+							/>
+						</div>
+						<small
+							id="lastNameValidation"
+							class="text-danger"
+						></small>
+					</div>
+
+					<div class="form-group">
+						<b>email</b>
+						<div class="input-group">
+							<span class="input-group-addon"
+								><i class="fa fa-envelope"></i
+							></span>
+							<input
+								id="email"
+								type="email"
+								class="form-control"
+							/>
+						</div>
+						<small id="emailValidation" class="text-danger"></small>
+					</div>
+
+					<div class="form-group">
+						<b>password</b>
+						<div class="input-group">
+							<span class="input-group-addon"
+								><i class="fa fa-key"></i
+							></span>
+							<input
+								id="password"
+								type="password"
+								class="form-control"
+							/>
+						</div>
+						<small
+							id="passwordValidation"
+							class="text-danger"
+						></small>
+					</div>
+
+					<div class="form-group">
+						<b>Gender</b>
+						<div class="input-group">
+							<span class="input-group-addon"
+								><i class="fa fa-female"></i> |
+								<i class="fa fa-male"></i
+							></span>
+							<select id="gender" class="form-control">
+								<option value="M">Male</option>
+								<option value="F">Female</option>
+							</select>
+						</div>
+						<small
+							id="genderValidation"
+							class="text-danger"
+						></small>
+					</div>
+
+					<div class="form-group">
+						<b><i class="fa fa-phone"></i>Contact no</b>
+						<div class="input-group">
+							<span class="input-group-addon">+91</span>
+							<input
+								id="contact"
+								type="number"
+								class="form-control"
+							/>
+						</div>
+						<small
+							id="contactValidation"
+							class="text-danger"
+						></small>
+					</div>
+
+					<div class="form-group">
+						<b>Birth date</b>
+						<div class="input-group">
+							<span class="input-group-addon"
+								><i class="fa fa-calendar"></i
+							></span>
+							<input
+								name="startYear"
+								id="datepicker1"
+								type="date"
+								class="date-picker-year form-control"
+							/>
+						</div>
+						<small id="birthValidation" class="text-danger"></small>
+					</div>
+
+					<div class="form-group">
+						<b>Age</b>
+						<div class="input-group">
+							<span class="input-group-addon"
+								><i class="fa fa-child"></i
+							></span>
+							<input
+								id="age"
+								type="number"
+								class="form-control"
+							/>
+						</div>
+						<small id="ageValidation" class="text-danger"></small>
+					</div>
+
+					<div class="form-group">
+						<a class="btn btn-primary" id="submit"
+							><i
+								class="fa fa-user-plus"
+								style="color: white"
+							></i>
+							Create New Account</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
