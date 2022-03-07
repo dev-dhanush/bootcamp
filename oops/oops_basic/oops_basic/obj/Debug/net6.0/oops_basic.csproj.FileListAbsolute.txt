@@ -1,0 +1,15 @@
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\bin\Debug\net6.0\oops_basic.exe
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\bin\Debug\net6.0\oops_basic.deps.json
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\bin\Debug\net6.0\oops_basic.runtimeconfig.json
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\bin\Debug\net6.0\oops_basic.dll
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\bin\Debug\net6.0\oops_basic.pdb
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.csproj.AssemblyReference.cache
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.AssemblyInfoInputs.cache
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.AssemblyInfo.cs
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.csproj.CoreCompileInputs.cache
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.dll
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\refint\oops_basic.dll
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.pdb
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\oops_basic.genruntimeconfig.cache
+C:\Users\Drashti.Patel\source\repos\oops_basic\oops_basic\obj\Debug\net6.0\ref\oops_basic.dll

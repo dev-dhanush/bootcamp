@@ -1,0 +1,15 @@
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\bin\Debug\net6.0\Dependecy_Injection.exe
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\bin\Debug\net6.0\Dependecy_Injection.deps.json
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\bin\Debug\net6.0\Dependecy_Injection.runtimeconfig.json
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\bin\Debug\net6.0\Dependecy_Injection.dll
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\bin\Debug\net6.0\Dependecy_Injection.pdb
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.csproj.AssemblyReference.cache
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.AssemblyInfoInputs.cache
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.AssemblyInfo.cs
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.csproj.CoreCompileInputs.cache
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.dll
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\refint\Dependecy_Injection.dll
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.pdb
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\Dependecy_Injection.genruntimeconfig.cache
+C:\Users\Drashti.Patel\source\repos\Dependecy_Injection\Dependecy_Injection\obj\Debug\net6.0\ref\Dependecy_Injection.dll
