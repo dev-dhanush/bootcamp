@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>flex container item</title>
+
+		<style type="text/css">
+			.item {
+				color: #ffffff;
+				font-size: 1rem;
+				padding: 0.75rem;
+				text-align: center;
+			}
+			.item-1 {
+				background-color: #dda0dd;
+			}
+			.item-2 {
+				background-color: #bf94e4;
+			}
+			.item-3 {
+				background-color: #734f96;
+			}
+			.item-4 {
+				background-color: #fbaed2;
+			}
+			.item-5 {
+				background-color: #ee82ee;
+			}
+			.item-6 {
+				background-color: #ade4ca;
+			}
+			.item-7 {
+				background-color: #a6d5ae;
+			}
+			.item-8 {
+				background-color: #8fbc8e;
+			}
+			.item-9 {
+				background-color: #64a466;
+			}
+			.item-10 {
+				background-color: #2e8b56;
+			}
+
+			.flex-align-item-row {
+				border: 4px solid #8400ff;
+				display: flex;
+				flex-direction: row;
+				height: 600px;
+				align-items: baseline;
+			}
+
+			.flex-align-content-row {
+				border: 4px solid #826a98;
+
+				display: flex;
+				height: 600px;
+				flex-wrap: wrap;
+				/* align-content: stretch; */
+				/* align-content: flex-start; */
+				/* align-content: flex-end; */
+				/* align-content: center; */
+				/* align-content: space-between; */
+				align-content: space-around;
+			}
+			.flex-align-content-column {
+				border: 4px solid #826a98;
+
+				display: flex;
+				height: 600px;
+				flex-wrap: wrap;
+				flex-direction: column;
+				/* align-content: stretch; */
+				/* align-content: flex-start; */
+				/* align-content: flex-end; */
+				/* align-content: center; */
+				/* align-content: space-between; */
+				align-content: space-around;
+			}
+			.flex-item-order {
+				border: 4px solid #826a98;
+				display: flex;
+			}
+			.flex-item-grow {
+				border: 4px solid #826a98;
+				display: flex;
+			}
+			.flex-item-shrink {
+				border: 4px solid #826a98;
+				display: flex;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>2.6.1-flex-align-item-row</h1>
+		<div class="flex-align-item-row">
+			<div class="item item-1">item-1</div>
+			<div class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>2.6.2-flex-align-item-column</h1>
+		<div class="flex-align-item-column">
+			<div class="item item-1">item-1</div>
+			<div class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>2.7.1-flex-align-content-row</h1>
+		<div class="flex-align-content-row">
+			<div class="item item-1">item-1</div>
+			<div class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>2.7.2-flex-align-content-column</h1>
+		<div class="flex-align-content-column">
+			<div class="item item-1">item-1</div>
+			<div class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>3.1-flex-item-order</h1>
+		<div class="flex-item-order">
+			<div style="order: -1" class="item item-1">item-1</div>
+			<div style="order: 2" class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>3.2-flex-item-grow</h1>
+		<div class="flex-item-grow">
+			<div style="flex-grow:2" class="item item-1">item-1</div>
+			<div style="flex-grow:2" class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+		<h1>3.3-flex-item-shrink</h1>
+		<div style="width: 500px;" class="flex-item-shrink">
+			<div style="flex-shrink:2" class="item item-1">item-1</div>
+			<div style="flex-shrink:2" class="item item-2">item-2</div>
+			<div class="item item-3">item-3</div>
+			<div class="item item-4">item-4</div>
+			<div class="item item-5">item-5</div>
+			<div class="item item-6">item-6</div>
+			<div class="item item-7">item-7</div>
+			<div class="item item-8">item-8</div>
+			<div class="item item-9">item-9</div>
+			<div class="item item-10">item-10</div>
+		</div>
+	</body>
+</html>
