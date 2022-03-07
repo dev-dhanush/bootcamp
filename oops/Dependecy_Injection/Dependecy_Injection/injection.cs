@@ -2,7 +2,7 @@
 
 namespace DependencyInjectionDemo
 {
-    #region Construtor Injection.
+    #region Constructor Injection.
     public interface I1
     {
         void Demo();
@@ -102,7 +102,7 @@ namespace DependencyInjectionDemo
     {
         static void Main(string[] args)
         {
-            #region Construtor Injection.
+            #region Constructor Injection.
             ConstructorInjection cs = null;
             cs = new ConstructorInjection(new Child1());
             cs.Demo();
